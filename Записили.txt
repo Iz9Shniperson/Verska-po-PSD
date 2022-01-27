@@ -1,0 +1,10 @@
+высота 796
+ширина 1440
+шапка 85
+place_your_image_here_dou_4 - овощи
+vector_smart_object_doubl_21 - мазь
+vector_smart_object_doubl_22 - фул
+
+<img src="/images/place_your_image_here_dou_4.jpg" alt="vegetables">
+                <img src="/images/vector_smart_object_doubl_22.png" alt="full">
+                <img src="/images/vector_smart_object_doubl_21.png" alt="stroke">

@@ -1,11 +1,128 @@
-divline {
-  font-size: 15px;
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
 body {
-  font-size: 20px;
+  height: 100%;
+  line-height: 1;
+  font-size: 25px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: Montserrat, Grand-Hotel;
+  background-color: gray;
 }
 
-body div {
-  font-size: 10px;
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+._container {
+  max-width: 1260px;
+  margin: 0px auto;
+  padding: 0px 15px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+/* --------ШАПКА--------------------------------------------------------- */
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 85px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.header__menu {
+  margin: 0px 0px 0px 300px;
+}
+
+.menu {
+  padding: 5px 0;
+}
+
+.menu__list {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__item {
+  margin: 0px 0px 0px 45px;
+}
+
+.menu__link {
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.header__search {
+  margin-left: auto;
+}
+
+@media (max-width: 992px) {
+  .header__menu {
+    margin: 0px 0px 0px 170px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__menu {
+    margin: 0px 0px 0px 70px;
+  }
+  .menu__link {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header__menu {
+    margin: 0px 0px 0px 0px;
+  }
 }
