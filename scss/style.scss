@@ -34,17 +34,30 @@ body {
 	color: #ffffff;
 	font-weight: 400;
 	font-family: Montserrat, Grand-Hotel;
-	background-color: gray;
+	/*background-color: gray;*/
 }
 .wrapper {
-	min-height: 100%;
+	min-height: 100%;	
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 }
 ._container {
 	max-width: 1260px;
 	margin: 0px auto;
 	padding: 0px 15px;
 	box-sizing: content-box;
+}
+._ibg {
+	position: relative;
+}
+._ibg img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
 }
 
 /* --------ШАПКА--------------------------------------------------------- */
@@ -62,7 +75,6 @@ body {
 	align-items: flex-end;
 }
 .header__logo {
-
 }
 .header__menu {
 	margin: 0px 0px 0px 300px;
@@ -87,12 +99,12 @@ body {
 	margin-left: auto;
 }
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
 	.header__menu {
 		margin: 0px 0px 0px 170px;
 	}
 }
-@media (max-width:767px) {
+@media (max-width: 767px) {
 	.header__menu {
 		margin: 0px 0px 0px 70px;
 	}
@@ -100,9 +112,87 @@ body {
 		font-size: 30px;
 	}
 }
-@media (max-width:650px) {
+@media (max-width: 650px) {
 	.header__menu {
 		margin: 0px 0px 0px 0px;
+	}
+}
+
+/* --------MAIN--------------------------------------------------------- */
+.page {
+	flex: 1 1 auto;
+}
+.page__main-block {
+}
+
+/* --------FOOTER--------------------------------------------------------- */
+.footer {
+}
+
+/* --------MAIN-BLOCK-------------------------------------------------------- */
+.main-block {
+	position: relative;
+}
+.main-block__container {
+}
+.main-block__body {
+	padding: 260px 210px 230px 500px;
+	position: relative;
+	z-index: 2;
+}
+.main-block__body > *:not(:last-child){
+	padding: 0px 0px 30px 0px;
+}
+.main-block__tittle {
+	font-size: 125px;
+	line-height: 56%;
+	font-weight: 400;
+	font-family: "Grand Hotel",handwriting;
+}
+.main-block__text {
+}
+.main-block__button {
+	display: flex;
+	background:#ffc200;
+	border-radius: 4px;
+	justify-content: center;
+	align-items: center;
+	min-height: 50px;
+	color: #2f2f2f;
+	font-weight: 700;
+	width: 250px;
+
+}
+.main-block__image {
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+@media (max-width: 1200px) {
+	.main-block__image img{
+		object-position: left;
+	}
+	.main-block__body {
+		padding: 260px 5px 230px 600px;
+	}
+	.main-block__text {
+		font-size: 30px;
+		
+	}
+}
+@media (max-width: 1070px) {
+	.main-block__image img{
+		object-position: left;
+	}
+	.main-block__body {
+		padding: 260px 210px 230px 100px;
+	}
+	.main-block__text {
+		font-size: 30px;
+		text-transform: uppercase;
+		font-weight: 800;
 	}
 }
 
